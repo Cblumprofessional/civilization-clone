@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="map-container">
+    <pre id="gamemap"></pre>
+</div>
+
+<script>
+    async function loadMap(){
+        const response = await fetch('/map');
+        const map = await response.json();
+        const mapElement = document.getElementById('gamemap');
+
+        for(const row of map){
+            for(const tile of row){
+                const span = document.createElement('span');
+                span.textContent = tile.symbol;
+                span.style.color = tile.color;
+
+                mapElement.appendChild(span);
+            }
+
+            mapElement.appendChild(document.createTextNode('\n'));
+        }
+    }
+    loadMap();
+</script>
