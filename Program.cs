@@ -28,11 +28,14 @@ if(debug){
 
     foreach (Biome biome in biomes)
     {
+        
         Console.WriteLine(
             $"{biome.name} | {biome.symbol} | " +
             $"E: {biome.elevation?.min} to {biome.elevation?.max} | " +
             $"M: {biome.moisture?.min} to {biome.moisture?.max} | " +
-            $"T: {biome.temperature?.min} to {biome.temperature?.max}"
+            $"T: {biome.temperature?.min} to {biome.temperature?.max} | " +
+            $"P:{biome.passable} | " +
+            $"W:{biome.weight}"
         );
     }
     using (StreamWriter writer = new StreamWriter(testFile, false))
@@ -53,6 +56,7 @@ if(debug){
                             $"E:{tile.elevation:F3} " +
                             $"M:{tile.moisture:F3} " +
                             $"T:{tile.temperature:F3}"
+                           
                         );
                     }
 
@@ -107,7 +111,9 @@ if(!debug){
                 map[y][x] = new
                 {
                     symbol = tile.Biome?.symbol ?? '?',
-                    color = tile.Biome?.color ?? "#ffffff"
+                    color = tile.Biome?.color ?? "#ffffff",
+                    passable = tile.Biome?.passable ?? true,
+                    weight = tile.Biome?.weight ?? 0
                 };
                 
             }

@@ -5,7 +5,9 @@
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": -1.0, "max": 1.0 },
     "temperature": { "min": -1.0, "max": -0.8 },
-    "color": "#000000"
+    "color": "#000000",
+    "passable": true,
+    "weight": 3
   },
   {
     "name": "tundra",
@@ -13,7 +15,9 @@
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": -1.0, "max": 1.0 },
     "temperature": { "min": -0.8, "max": -0.5 },
-    "color": "#878ecd"
+    "color": "#878ecd",
+    "passable": true,
+    "weight": 1
   },
   {
     "name": "plains",
@@ -21,7 +25,9 @@
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": -1.0, "max": -0.2 },
     "temperature": { "min": -0.5, "max": 0.6 },
-    "color": "#be8415"
+    "color": "#be8415",
+    "passable": true,
+    "weight": 1
   },
   {
     "name": "grassland",
@@ -29,7 +35,9 @@
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": -0.2, "max": 0.55 },
     "temperature": { "min": -0.5, "max": 0.6 },
-    "color": "#7CB342"
+    "color": "#7CB342",
+    "passable": true,
+    "weight": 1
   },
   {
     "name": "forest",
@@ -37,7 +45,9 @@
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": 0.55, "max": 1.0 },
     "temperature": { "min": -0.5, "max": 0.6 },
-    "color": "#2E7D32"
+    "color": "#2E7D32",
+    "passable": true,
+    "weight": 2
   },
   {
     "name": "desert",
@@ -45,7 +55,9 @@
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": -1.0, "max": -0.4 },
     "temperature": { "min": 0.6, "max": 1.0 },
-    "color": "#CCAD60"
+    "color": "#CCAD60",
+    "passable": true,
+    "weight": 2
   },
   {
     "name": "savanna",
@@ -53,7 +65,9 @@
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": -0.4, "max": 0.55 },
     "temperature": { "min": 0.6, "max": 1.0 },
-    "color": "#D1BD92"
+    "color": "#D1BD92",
+    "passable": true,
+    "weight": 2
   },
   {
     "name": "rainforest",
@@ -61,7 +75,9 @@
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": 0.55, "max": 1.0 },
     "temperature": { "min": 0.6, "max": 1.0 },
-    "color": "#00755E"
+    "color": "#00755E",
+    "passable": true,
+    "weight": 4
   },
   {
     "name": "mountain",
@@ -69,7 +85,9 @@
     "elevation": { "min": 0.72, "max": 1.0 },
     "moisture": { "min": -1.0, "max": 1.0 },
     "temperature": { "min": -0.6, "max": 1.0 },
-    "color": "#818B99"
+    "color": "#818B99",
+    "passable": true,
+    "weight": 5
   },
   {
     "name": "frozenmountain",
@@ -77,20 +95,26 @@
     "elevation": { "min": 0.72, "max": 1.0 },
     "moisture": { "min": -1.0, "max": 1.0 },
     "temperature": { "min": -1.0, "max": -0.6 },
-    "color": "#dde5f4"
+    "color": "#dde5f4",
+    "passable": true,
+    "weight": 5
   },
   {
     "name": "ocean",
     "symbol": "~",
     "elevation": { "min": -1.0, "max": -0.25 },
     "temperature": { "min": -0.6, "max": 1.0 },
-    "color": "#1976D2"
+    "color": "#1976D2",
+    "passable": true,
+    "weight": 5
   },
   {
     "name": "frozenocean",
     "symbol": "-",
     "elevation": { "min": -1.0, "max": -0.25 },
     "temperature": { "min": -1.0, "max": -0.6 },
-    "color": "#7B9CB3"
+    "color": "#7B9CB3",
+    "passable": true,
+    "weight": 4
   }
 ]

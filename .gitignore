@@ -1,0 +1,5 @@
+bin/
+obj/
+
+src/log.txt
+src/unknown.txt
