@@ -1,0 +1,178 @@
+[
+  {
+    "name": "oil",
+    "yields": {
+      "gold": 3,
+      "food": 0,
+      "production": 3
+    }
+  },
+  {
+    "name": "silver",
+    "yields": {
+      "gold": 3,
+      "food": 0,
+      "production": 1
+    }
+  },
+  {
+    "name": "iron",
+    "yields": {
+      "gold": 0,
+      "food": 0,
+      "production": 3
+    }
+  },
+  {
+    "name": "copper",
+    "yields": {
+      "gold": 1,
+      "food": 0,
+      "production": 2
+    }
+  },
+  {
+    "name": "gold",
+    "yields": {
+      "gold": 4,
+      "food": 0,
+      "production": 0
+    }
+  },
+  {
+    "name": "coal",
+    "yields": {
+      "gold": 1,
+      "food": 0,
+      "production": 3
+    }
+  },
+  {
+    "name": "aluminum",
+    "yields": {
+      "gold": 1,
+      "food": 0,
+      "production": 3
+    }
+  },
+  {
+    "name": "stone",
+    "yields": {
+      "gold": 0,
+      "food": 0,
+      "production": 3
+    }
+  },
+  {
+    "name": "salt",
+    "yields": {
+      "gold": 2,
+      "food": 1,
+      "production": 0
+    }
+  },
+  {
+    "name": "cattle",
+    "yields": {
+      "gold": 0,
+      "food": 3,
+      "production": 1
+    }
+  },
+  {
+    "name": "horses",
+    "yields": {
+      "gold": 1,
+      "food": 1,
+      "production": 1
+    }
+  },
+  {
+    "name": "sheep",
+    "yields": {
+      "gold": 1,
+      "food": 2,
+      "production": 1
+    }
+  },
+  {
+    "name": "deer",
+    "yields": {
+      "gold": 0,
+      "food": 2,
+      "production": 1
+    }
+  },
+  {
+    "name": "biggame",
+    "yields": {
+      "gold": 1,
+      "food": 3,
+      "production": 0
+    }
+  },
+  {
+    "name": "smallgame",
+    "yields": {
+      "gold": 0,
+      "food": 2,
+      "production": 0
+    }
+  },
+  {
+    "name": "timber",
+    "yields": {
+      "gold": 1,
+      "food": 0,
+      "production": 3
+    }
+  },
+  {
+    "name": "spices",
+    "yields": {
+      "gold": 3,
+      "food": 1,
+      "production": 0
+    }
+  },
+  {
+    "name": "fruit",
+    "yields": {
+      "gold": 1,
+      "food": 3,
+      "production": 0
+    }
+  },
+  {
+    "name": "rubber",
+    "yields": {
+      "gold": 2,
+      "food": 0,
+      "production": 2
+    }
+  },
+  {
+    "name": "fish",
+    "yields": {
+      "gold": 0,
+      "food": 3,
+      "production": 0
+    }
+  },
+  {
+    "name": "whales",
+    "yields": {
+      "gold": 2,
+      "food": 2,
+      "production": 1
+    }
+  },
+  {
+    "name": "pearls",
+    "yields": {
+      "gold": 4,
+      "food": 0,
+      "production": 0
+    }
+  }
+]

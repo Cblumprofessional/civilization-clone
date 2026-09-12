@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
 using biome;
+using squad;
 
 bool debug = false;
 if (args.Contains("-1"))
@@ -12,16 +13,25 @@ if (args.Contains("-1"))
 
 string? testFile = @"./src/log.txt";
 string? unknown = @"./src/unknown.txt";
+string tileInfoFile = @"./src/tileinfo.txt";
 
-int width = 500;
-int height = 500;
+int width = 128;
+int height = 128;
 
 var builder = WebApplication.CreateBuilder(args);
 
 string biomeJson = File.ReadAllText("./src/json/biomes.json");
 List<Biome>? biomes = JsonSerializer.Deserialize<List<Biome>>(biomeJson);
 
-GenerateWorld generator = new GenerateWorld(biomes);
+string featuresJson = File.ReadAllText("./src/json/features.json");
+List<Features>? features = JsonSerializer.Deserialize<List<Features>>(featuresJson);
+
+string resourcesJson = File.ReadAllText("./src/json/resources.json");
+List<Resources>? resources = JsonSerializer.Deserialize<List<Resources>>(resourcesJson);
+GenerateWorld generator = new GenerateWorld(biomes, features, resources);
+
+Squad squad = new Squad{troopCount = 1, x = 50, y = 50};
+
 
 
 if(debug){
@@ -38,8 +48,17 @@ if(debug){
             $"W:{biome.weight}"
         );
     }
+
+    Console.WriteLine($"C: {squad.troopCount}");
+    Console.WriteLine($"X: {squad.x}");
+    Console.WriteLine($"Y: {squad.y}");
+
+    
+
+    
     using (StreamWriter writer = new StreamWriter(testFile, false))
     using (StreamWriter ukfile = new StreamWriter(unknown, false))
+
 
 
      for(int i = 0; i < width; i++)
@@ -65,6 +84,33 @@ if(debug){
             }
             writer.WriteLine();
             
+        }
+
+        using (StreamWriter tileWriter = new StreamWriter(tileInfoFile, false))
+        {
+            for (int x = 0; x < width; x++)
+            {
+                for (int y = 0; y < height; y++)
+                {
+                    Tile tile = generator.World[x, y];
+
+                    tileWriter.WriteLine(
+                        $"X:{x} Y:{y} | " +
+                        $"Biome:{tile.Biome?.name ?? "Unknown"} | " +
+                        $"Symbol:{tile.Biome?.symbol ?? '?'} | " +
+                        $"Elevation:{tile.elevation:F3} | " +
+                        $"Moisture:{tile.moisture:F3} | " +
+                        $"Temperature:{tile.temperature:F3} | " +
+                        $"Feature:{tile.feature ?? "None"} | " +
+                        $"Resource:{tile.resource ?? "None"} | " +
+                        $"Gold:{tile.gold} | " +
+                        $"Food:{tile.food} | " +
+                        $"Production:{tile.production} | " +
+                        $"Passable:{tile.Biome?.passable ?? false} | " +
+                        $"Weight:{tile.Biome?.weight ?? 0}"
+                    );
+                }
+            }
         }
     Console.WriteLine("Wrote to test file");
 
@@ -103,18 +149,29 @@ if(!debug){
 
         for(int y = 0; y < height; y++)
         {
+            
             map[y] = new object[width];
             for(int x = 0; x < width; x++)
             {
-                Tile tile = generator.World[x,y];
-
-                map[y][x] = new
+                if(squad.x == x && squad.y == y)
                 {
-                    symbol = tile.Biome?.symbol ?? '?',
-                    color = tile.Biome?.color ?? "#ffffff",
-                    passable = tile.Biome?.passable ?? true,
-                    weight = tile.Biome?.weight ?? 0
-                };
+                    map[y][x] = new
+                    {
+                        symbol = squad.symbol,
+                        color = squad.color
+                    };
+                }else{
+                    Tile tile = generator.World[x,y];
+
+                    map[y][x] = new
+                    {
+                        symbol = tile.Biome?.symbol ?? '?',
+                        color = tile.Biome?.color ?? "#ffffff",
+                        passable = tile.Biome?.passable ?? true,
+                        weight = tile.Biome?.weight ?? 0
+
+                    };
+                }
                 
             }
         }

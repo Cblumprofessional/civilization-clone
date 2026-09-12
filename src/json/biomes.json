@@ -5,114 +5,293 @@
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": -1.0, "max": 1.0 },
     "temperature": { "min": -1.0, "max": -0.8 },
+
+    "yields": {
+      "gold": 0,
+      "food": 0,
+      "production": 1
+    },
+
+    "allowed_features": ["forest", "icefield"],
+
+    "allowed_resources": ["oil", "silver", "iron", "smallgame"],
+
     "color": "#000000",
     "passable": true,
     "weight": 3
   },
+
   {
     "name": "tundra",
     "symbol": "t",
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": -1.0, "max": 1.0 },
     "temperature": { "min": -0.8, "max": -0.5 },
+
+    "yields": {
+      "gold": 1,
+      "food": 1,
+      "production": 1
+    },
+
+    "allowed_features": ["forest", "marsh", "river"],
+
+    "allowed_resources": ["oil", "copper", "iron", "silver", "biggame"],
+
     "color": "#878ecd",
     "passable": true,
     "weight": 1
   },
+
   {
     "name": "plains",
     "symbol": ".",
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": -1.0, "max": -0.2 },
     "temperature": { "min": -0.5, "max": 0.6 },
+
+    "yields": {
+      "gold": 1,
+      "food": 2,
+      "production": 1
+    },
+
+    "allowed_features": ["wheatfield", "forest", "river"],
+
+    "allowed_resources": [
+      "cattle",
+      "horses",
+      "sheep",
+      "coal",
+      "iron",
+      "aluminum"
+    ],
+
     "color": "#be8415",
     "passable": true,
     "weight": 1
   },
+
   {
     "name": "grassland",
     "symbol": "g",
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": -0.2, "max": 0.55 },
     "temperature": { "min": -0.5, "max": 0.6 },
+
+    "yields": {
+      "gold": 1,
+      "food": 2,
+      "production": 1
+    },
+
+    "allowed_features": ["wheatfield", "forest", "marsh", "river"],
+
+    "allowed_resources": [
+      "cattle",
+      "horses",
+      "sheep",
+      "deer",
+      "coal",
+      "aluminum"
+    ],
+
     "color": "#7CB342",
     "passable": true,
     "weight": 1
   },
+
   {
     "name": "forest",
     "symbol": "F",
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": 0.55, "max": 1.0 },
     "temperature": { "min": -0.5, "max": 0.6 },
+
+    "yields": {
+      "gold": 0,
+      "food": 1,
+      "production": 3
+    },
+
+    "allowed_features": ["river", "marsh"],
+
+    "allowed_resources": [
+      "deer",
+      "biggame",
+      "smallgame",
+      "timber",
+      "iron",
+      "coal"
+    ],
+
     "color": "#2E7D32",
     "passable": true,
     "weight": 2
   },
+
   {
     "name": "desert",
     "symbol": "D",
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": -1.0, "max": -0.4 },
     "temperature": { "min": 0.6, "max": 1.0 },
+
+    "yields": {
+      "gold": 1,
+      "food": 0,
+      "production": 1
+    },
+
+    "allowed_features": ["oasis", "dunes", "river"],
+
+    "allowed_resources": ["oil", "gold", "silver", "copper", "salt"],
+
     "color": "#CCAD60",
     "passable": true,
     "weight": 2
   },
+
   {
     "name": "savanna",
     "symbol": ":",
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": -0.4, "max": 0.55 },
     "temperature": { "min": 0.6, "max": 1.0 },
+
+    "yields": {
+      "gold": 1,
+      "food": 2,
+      "production": 1
+    },
+
+    "allowed_features": ["river", "woodland", "grassfield"],
+
+    "allowed_resources": ["cattle", "horses", "biggame", "gold", "copper"],
+
     "color": "#D1BD92",
     "passable": true,
     "weight": 2
   },
+
   {
     "name": "rainforest",
     "symbol": "R",
     "elevation": { "min": -0.25, "max": 0.72 },
     "moisture": { "min": 0.55, "max": 1.0 },
     "temperature": { "min": 0.6, "max": 1.0 },
+
+    "yields": {
+      "gold": 1,
+      "food": 3,
+      "production": 2
+    },
+
+    "allowed_features": ["river", "marsh"],
+
+    "allowed_resources": [
+      "spices",
+      "fruit",
+      "rubber",
+      "timber",
+      "gold",
+      "biggame"
+    ],
+
     "color": "#00755E",
     "passable": true,
     "weight": 4
   },
+
   {
     "name": "mountain",
     "symbol": "^",
     "elevation": { "min": 0.72, "max": 1.0 },
     "moisture": { "min": -1.0, "max": 1.0 },
     "temperature": { "min": -0.6, "max": 1.0 },
+
+    "yields": {
+      "gold": 1,
+      "food": 0,
+      "production": 3
+    },
+
+    "allowed_features": ["cave", "spring"],
+
+    "allowed_resources": [
+      "iron",
+      "copper",
+      "coal",
+      "gold",
+      "silver",
+      "aluminum",
+      "stone"
+    ],
+
     "color": "#818B99",
     "passable": true,
     "weight": 5
   },
+
   {
     "name": "frozenmountain",
     "symbol": "A",
     "elevation": { "min": 0.72, "max": 1.0 },
     "moisture": { "min": -1.0, "max": 1.0 },
     "temperature": { "min": -1.0, "max": -0.6 },
+
+    "yields": {
+      "gold": 1,
+      "food": 0,
+      "production": 2
+    },
+
+    "allowed_features": ["cave", "glacier"],
+
+    "allowed_resources": ["iron", "silver", "gold", "copper", "stone"],
+
     "color": "#dde5f4",
     "passable": true,
     "weight": 5
   },
+
   {
     "name": "ocean",
     "symbol": "~",
     "elevation": { "min": -1.0, "max": -0.25 },
     "temperature": { "min": -0.6, "max": 1.0 },
+
+    "yields": {
+      "gold": 1,
+      "food": 2,
+      "production": 0
+    },
+
+    "allowed_features": ["reef", "kelpforest"],
+
+    "allowed_resources": ["fish", "whales", "pearls", "oil"],
+
     "color": "#1976D2",
     "passable": true,
     "weight": 5
   },
+
   {
     "name": "frozenocean",
     "symbol": "-",
     "elevation": { "min": -1.0, "max": -0.25 },
     "temperature": { "min": -1.0, "max": -0.6 },
+
+    "yields": {
+      "gold": 0,
+      "food": 1,
+      "production": 0
+    },
+
+    "allowed_features": ["seaice", "iceberg"],
+
+    "allowed_resources": ["fish", "whales", "oil"],
+
     "color": "#7B9CB3",
     "passable": true,
     "weight": 4

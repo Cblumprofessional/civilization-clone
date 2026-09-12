@@ -1,0 +1,130 @@
+[
+  {
+    "name": "forest",
+    "yields": {
+      "gold": 0,
+      "food": 0,
+      "production": 2
+    }
+  },
+  {
+    "name": "icefield",
+    "yields": {
+      "gold": 0,
+      "food": 0,
+      "production": 1
+    }
+  },
+  {
+    "name": "marsh",
+    "yields": {
+      "gold": 0,
+      "food": 2,
+      "production": -1
+    }
+  },
+  {
+    "name": "river",
+    "yields": {
+      "gold": 1,
+      "food": 2,
+      "production": 0
+    }
+  },
+  {
+    "name": "wheatfield",
+    "yields": {
+      "gold": 0,
+      "food": 3,
+      "production": 0
+    }
+  },
+  {
+    "name": "oasis",
+    "yields": {
+      "gold": 1,
+      "food": 3,
+      "production": 0
+    }
+  },
+  {
+    "name": "dunes",
+    "yields": {
+      "gold": 0,
+      "food": 0,
+      "production": 1
+    }
+  },
+  {
+    "name": "woodland",
+    "yields": {
+      "gold": 0,
+      "food": 1,
+      "production": 1
+    }
+  },
+  {
+    "name": "grassfield",
+    "yields": {
+      "gold": 0,
+      "food": 2,
+      "production": 0
+    }
+  },
+  {
+    "name": "cave",
+    "yields": {
+      "gold": 1,
+      "food": 0,
+      "production": 1
+    }
+  },
+  {
+    "name": "spring",
+    "yields": {
+      "gold": 0,
+      "food": 2,
+      "production": 0
+    }
+  },
+  {
+    "name": "glacier",
+    "yields": {
+      "gold": 0,
+      "food": 0,
+      "production": 1
+    }
+  },
+  {
+    "name": "reef",
+    "yields": {
+      "gold": 1,
+      "food": 2,
+      "production": 0
+    }
+  },
+  {
+    "name": "kelpforest",
+    "yields": {
+      "gold": 0,
+      "food": 2,
+      "production": 0
+    }
+  },
+  {
+    "name": "seaice",
+    "yields": {
+      "gold": 0,
+      "food": -1,
+      "production": 0
+    }
+  },
+  {
+    "name": "iceberg",
+    "yields": {
+      "gold": 0,
+      "food": 0,
+      "production": 1
+    }
+  }
+]
